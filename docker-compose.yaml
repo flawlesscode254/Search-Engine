@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    container_name: meilisearch
+    volumes:
+      - ./data.ms:/data.ms
+    ports:
+      - "7700:7700"
+    environment:
+      MEILI_MASTER_KEY: "thisdataisnotforallviewerskeepawayfromit"
+    restart: always
+
+  api:
+    build: .
+    depends_on:
+      - meilisearch
+    ports:
+      - "2357:2357"
+    environment:
+      PORT: 2357
+      MEILI_HOST: "http://meilisearch:7700"
+      MEILI_KEY: "thisdataisnotforallviewerskeepawayfromit"
