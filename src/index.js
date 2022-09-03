@@ -17,7 +17,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(express.json())
+app.use(express.json());
 
 const port = process.env.PORT;
 const meiliHost = process.env.MEILI_HOST;
@@ -36,12 +36,27 @@ app.get("/", (req, res) => {
 });
 
 app.post("/add", (req, res) => {
+  const refIndex = req.get("refIndex");
+  const data = req.body;
   client
-    .index("movie")
-    .addDocuments(req.body)
+    .index(refIndex)
+    .addDocuments(data)
     .then((response) => {
       res.json({
-        message: response,
+        reply: response,
+      });
+    });
+});
+
+app.get("/search", (req, res) => {
+  const refIndex = req.get("refIndex");
+  const query = req.get("query");
+  client
+    .index(refIndex)
+    .search(query)
+    .then((response) => {
+      res.json({
+        reply: response,
       });
     });
 });
