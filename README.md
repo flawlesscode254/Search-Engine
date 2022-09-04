@@ -23,7 +23,7 @@
 - Install the package by running
 
 ```bash
-    npm i search-engine-query
+    npm i search-engine-query-client
 ```
 - Ensure that your `Search Engine` is running and you have its `url`
 
@@ -41,7 +41,7 @@
 - `Gun` is my sample search query
 
 ```javascript
-import { addSearchableData, searchData } from ("search-engine-query");
+import { addSearchableData, searchData } from ("search-engine-query-client");
 
 const tryAddData = async () => {
   await addSearchableData("http://localhost:2357/add", "movies", {
