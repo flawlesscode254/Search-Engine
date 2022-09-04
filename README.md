@@ -12,3 +12,4 @@
 # To secure your engine
 * [x] Replace your `MEILI_MASTER_KEY` with a strong password in the `docker-compose.yaml` file
 * [x] Do the same for the `MEILI_KEY` in the same `docker-compose.yaml` file
+* [x] The two keys should be the same
