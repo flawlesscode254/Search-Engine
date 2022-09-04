@@ -44,7 +44,7 @@
 import { addSearchableData, searchData } from ("search-engine-query");
 
 const tryAddData = async () => {
-  await addSearchableData("http://localhost:2357/search", "movies", {
+  await addSearchableData("http://localhost:2357/add", "movies", {
     id: 2,
     title: "Smoking Gun",
   }).then((res) => console.log(res));
