@@ -6,6 +6,7 @@
 # Upload your data (/add) that you want to be searchable by
 * [x] Passing the search index as `refIndex` in your POST request header
 * [x] Passing the data in your `request body`
+* `To smoothen the process, its best to conduct this process via a Cloud function`
 # To search (/search) for data in the engine
 * [x] Passing the search index as `refIndex` in your GET request header
 * [x] Passing the search query as `query` in your GET request header
