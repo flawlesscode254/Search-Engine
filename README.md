@@ -17,4 +17,4 @@
 # Benefits
 * [x] The service is `lightning fast`
 * [x] It is equiped with a `load balancer` and therefore can be scaled infinitely
-* [x] It is very easy to user
+* [x] It is very easy to use
