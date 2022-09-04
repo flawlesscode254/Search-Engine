@@ -9,3 +9,6 @@
 # To search for data in the engine
 * [x] Passing the search index as `refIndex` in your POST request header
 * [x] Passing the search query as `query` in your POST request header
+# To secure your engine
+* [x] Replace your `MEILI_MASTER_KEY` with a strong password in the `docker-compose.yaml` file
+* [x] Do the same for the `MEILI_KEY` in the same `docker-compose.yaml` file
