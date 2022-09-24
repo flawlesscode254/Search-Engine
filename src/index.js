@@ -21,6 +21,12 @@ app.use(express.json());
 app.use("/add", AddSearchData);
 app.use("/search", SearchData);
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Search Entry"
+  })
+})
+
 const port = process.env.PORT;
 
 app.listen(port, () => {
