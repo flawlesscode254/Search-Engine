@@ -14,18 +14,11 @@ services:
 
   api:
     build: .
+    ports:
+      - "2357:2357"
     depends_on:
       - meilisearch
     environment:
       PORT: 2357
       MEILI_HOST: "http://meilisearch:7700"
       MEILI_KEY: "thisdataisnotforallviewerskeepawayfromit"
-
-  nginx:
-    image: nginx:latest
-    volumes:
-      - ./conf.d:/etc/nginx/conf.d
-    depends_on:
-      - api
-    ports:
-      - "2357:2357"
